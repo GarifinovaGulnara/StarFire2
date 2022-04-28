@@ -1,0 +1,31 @@
+﻿<Page x:Class="StarFire.Pages.OrderingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StarFire.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1440"
+      Title="OrderingPage">
+
+    <Grid Background="White">
+        <TextBox Style="{DynamicResource StyleTB}" Padding="10" HorizontalAlignment="Left" Margin="80,119,0,0" Text="Описание заказа" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="20" Height="195"/>
+        <Label Content="Подробно опишите ваш заказ. При желании можете добавить фотографию &#xD;&#xA;примерного изделия, которое Вы хотите получить. " HorizontalAlignment="Left" Margin="80,20,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="20" Foreground="#FF7E7E7E"/>
+        <Label Content="Если Вы испытываете сложности с описанием товара, предлагаем Вам &#xD;&#xA;подойти к нам в мастерскую для личного обсуждения." HorizontalAlignment="Left" Margin="80,325,0,0" VerticalAlignment="Top" Foreground="#FF7E7E7E" FontSize="20"/>
+        <Button Style="{DynamicResource StyleBtn}" Content="Отправить заказ" Background="#FF4F61" Foreground="White" FontSize="24" Width="250" Height="60" HorizontalAlignment="Left" Margin="995,330,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Платье" Background="#FFCD07" HorizontalAlignment="Left" Margin="475,148,0,0" VerticalAlignment="Top" Foreground="#FF484848" FontSize="20"/>
+        <RadioButton Content="Юбка" Background="#FFCD07" HorizontalAlignment="Left" Margin="475,188,0,0" VerticalAlignment="Top" Foreground="#FF484848" FontSize="20"/>
+        <RadioButton Content="Брюки" Background="#FFCD07" HorizontalAlignment="Left" Margin="475,228,0,0" VerticalAlignment="Top" Foreground="#FF484848" FontSize="20"/>
+        <Label Content="Выберите изделие:" HorizontalAlignment="Left" Margin="455,98,0,0" VerticalAlignment="Top" Foreground="#FF444444" FontSize="24"/>
+        <Label Content="Введите параметры:" HorizontalAlignment="Left" Margin="760,98,0,0" VerticalAlignment="Top" Foreground="#FF444444" FontSize="24"/>
+        <Label Content="Длина изделия" HorizontalAlignment="Left" Margin="765,148,0,0" VerticalAlignment="Top" Foreground="#FF484848" FontSize="20"/>
+        <Label Content="Обхват груди" HorizontalAlignment="Left" Margin="765,226,0,0" VerticalAlignment="Top" Foreground="#FF484848" FontSize="20"/>
+        <Label Content="Обхват талии" HorizontalAlignment="Left" Margin="765,265,0,0" VerticalAlignment="Top" Foreground="#FF484848" FontSize="20"/>
+        <Label Content="Обхват бёдер" HorizontalAlignment="Left" Margin="765,187,0,0" VerticalAlignment="Top" Foreground="#FF484848" FontSize="20"/>
+        <TextBox Style="{DynamicResource StyleTB}" HorizontalAlignment="Left" Margin="950,153,0,0" VerticalAlignment="Top" Width="120" Height="30" Padding="5" Background="#FFFBD4" BorderBrush="#FFCD07" BorderThickness="2" Foreground="#ED9300"/>
+        <TextBox Style="{DynamicResource StyleTB}" HorizontalAlignment="Left" Margin="950,192,0,0" VerticalAlignment="Top" Width="120" Height="30" Padding="5" Background="#FFFBD4" BorderBrush="#FFCD07" BorderThickness="2" Foreground="#ED9300"/>
+        <TextBox Style="{DynamicResource StyleTB}" HorizontalAlignment="Left" Margin="950,230,0,0" VerticalAlignment="Top" Width="120" Height="30" Padding="5" Background="#FFFBD4" BorderBrush="#FFCD07" BorderThickness="2" Foreground="#ED9300"/>
+        <TextBox Style="{DynamicResource StyleTB}" HorizontalAlignment="Left" Margin="950,268,0,0" VerticalAlignment="Top" Width="120" Height="30" Padding="5" Background="#FFFBD4" BorderBrush="#FFCD07" BorderThickness="2" Foreground="#ED9300"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+﻿<Page x:Class="StarFire.Pages.EmploeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StarFire.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1440"
+      Title="EmploeePage">
+
+    <Grid Background="White">
+        <Image HorizontalAlignment="Left" Height="150" Margin="805,245,0,0" VerticalAlignment="Top" Width="150" Source="/img/Laila.jpg"/>
+        <Image HorizontalAlignment="Left" Height="150" Margin="185,55,0,0" VerticalAlignment="Top" Width="150" Source="/img/Gulnara.jpg"/>
+        <Image HorizontalAlignment="Left" Height="150" Margin="185,245,0,0" VerticalAlignment="Top" Width="150" Source="/img/Alina.jpg"/>
+        <Image HorizontalAlignment="Left" Height="150" Margin="805,55,0,0" VerticalAlignment="Top" Width="150" Source="/img/Ailina.jpg"/>
+        <Label Content="Портной" HorizontalAlignment="Left" Margin="1005,55,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="28" Foreground="#FF515151"/>
+        <Label Content="Дизайнер 
+одежды" HorizontalAlignment="Left" Margin="385,245,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="28" Foreground="#FF515151"/>
+        <Label Content="Директор" HorizontalAlignment="Left" Margin="385,55,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="28" Foreground="#FF515151"/>
+        <Label Content="Дизайнер 
+акссесуаров" HorizontalAlignment="Left" Margin="1005,245,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="28" Foreground="#FF515151"/>
+
+    </Grid>
+</Page>

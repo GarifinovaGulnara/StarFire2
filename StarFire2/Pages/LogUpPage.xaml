@@ -1,0 +1,39 @@
+﻿<Page x:Class="StarFire.Pages.LogUpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StarFire.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="680" d:DesignWidth="1440"
+      Title="LogUpPage">
+
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="1"
+            Style="{DynamicResource StyleTB}" 
+            BorderBrush="#FFCD07" 
+            Background="#FFFBD4" 
+            Padding="10" 
+            BorderThickness="2" 
+            Text="ФИО" 
+            FontSize="24" 
+            Foreground="#ED9300" 
+            Width="280" 
+            Height="60" Margin="210,40,230,240"/>
+        <Image Grid.Column="1" Source="/img/LogUpFon.PNG" Margin="98,89,108,74" Grid.RowSpan="3"/>
+        <TextBox Grid.Row="1" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Телефон" FontSize="24" Foreground="#ED9300" Width="280" Height="60" Margin="212,150,228,130"/>
+        <TextBox Grid.Row="1" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Пароль" FontSize="24" Foreground="#ED9300" Width="280" Height="60" Margin="210,250,230,30"/>
+        <Button Grid.Row="2" x:Name="LogUpAppBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Width="270" Height="50" FontSize="24" Foreground="White" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="215,55,0,0" VerticalAlignment="Top" Click="LogUpAppBtn_Click"/>
+        <Button Grid.Row="0" x:Name="BackBtn" Style="{DynamicResource StyleBtn}" Content="Назад" Foreground="White" FontSize="20" Background="#AFA2CE" Width="80" Height="50"  HorizontalAlignment="Left" Margin="45,30,0,0" VerticalAlignment="Top" Click="BackBtn_Click"/>
+    </Grid>
+</Page>

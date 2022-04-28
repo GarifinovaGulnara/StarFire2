@@ -1,0 +1,27 @@
+﻿<Page x:Class="StarFire.Pages.ProfilPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StarFire.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1440"
+      Title="ProfilPage">
+
+    <Grid Background="White">
+        <Image HorizontalAlignment="Left" Height="250" Margin="90,60,0,0" VerticalAlignment="Top" Width="250" Source="/img/profil.png"/>
+        <Button x:Name="UpdateProfilBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="200" Content="Редактировать" HorizontalAlignment="Left" Margin="110,335,0,0" VerticalAlignment="Top"/>
+        <Label Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,80,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="10" FontSize="24"/>
+        <Label Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,160,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="10" FontSize="24"/>
+        <Label Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,240,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="10" FontSize="24"/>
+        <Label Content="Мои заказы" FontSize="24" Foreground="#7A7A7A" HorizontalAlignment="Left" Margin="1015,58,0,0" VerticalAlignment="Top"/>
+        <ListView Width="400" Height="250" Margin="885,105,155,95">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>

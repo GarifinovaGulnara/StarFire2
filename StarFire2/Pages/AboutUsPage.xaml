@@ -1,0 +1,19 @@
+﻿<Page x:Class="StarFire.Pages.AboutUsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StarFire.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1440"
+      Title="AboutUsPage">
+
+    <Grid Background="White">
+        <Label Content="Почему выбирают нас?" FontSize="32" Foreground="#7A7A7A"  HorizontalAlignment="Left" Margin="535,4,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Image Source="/img/AboutUsFirstImg.PNG" HorizontalAlignment="Left" Height="215" Margin="135,45,0,0" VerticalAlignment="Top" Width="350"/>
+        <Label Content="В мастерской сотрудники пользуются современным и удобным &#xD;&#xA;оборудованием. Удобные рабочие места и хорошее освещение &#xD;&#xA;обеспечивают условия для качественной работы." FontSize="24" Foreground="#7A7A7A" HorizontalAlignment="Left" Margin="620,95,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="198" Margin="934,225,0,0" VerticalAlignment="Top" Width="228" Source="/img/AboutUsSecondImg.PNG"/>
+        <Label Content="Наши работники очень творческие личности, &#xD;&#xA;и каждый из них вносит вклад в нашу маленькую команду, &#xD;&#xA;чтобы вы могли получить красивый и качественный товар." FontSize="24" Foreground="#7A7A7A" HorizontalAlignment="Left" Margin="135,285,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
