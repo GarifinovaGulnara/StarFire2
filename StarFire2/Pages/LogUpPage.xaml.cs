@@ -30,7 +30,7 @@ namespace StarFire.Pages
 
         private void LogUpAppBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (FIOLb.Text=="" || PhoneLb.Text == "" || PassLb.Password == "")
+            if (NameLb.Text=="" || SurnameLb.Text=="" || PhoneLb.Text == "" || PassLb.Password == "")
             {
                 MessageBox.Show("Введите все данные");
             }
@@ -38,7 +38,8 @@ namespace StarFire.Pages
             {
                 Users us = new Users();
                 {
-                    us.Name = FIOLb.Text;
+                    us.Name = NameLb.Text;
+                    us.Surname = SurnameLb.Text;
                 }
                 App.starFireEntities.Users.Add(us);
                 App.starFireEntities.SaveChanges();
@@ -53,10 +54,7 @@ namespace StarFire.Pages
                 App.starFireEntities.SaveChanges();
                 MessageBox.Show("ok");
 
-
-                AboutUsWindow aboutus = new AboutUsWindow();
-                aboutus.Show();
-                Application.Current.MainWindow.Close();
+                this.NavigationService.Navigate(new LogInPage());
             }
         }
 

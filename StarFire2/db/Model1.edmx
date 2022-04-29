@@ -25,13 +25,6 @@
           <Property Name="ID_user" Type="int" Nullable="false" />
           <Property Name="Ready" Type="bit" Nullable="false" />
         </EntityType>
-        <EntityType Name="Photo">
-          <Key>
-            <PropertyRef Name="ID_photo" />
-          </Key>
-          <Property Name="ID_photo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="photo" Type="varbinary" MaxLength="50" Nullable="false" />
-        </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="ID_prod" />
@@ -74,7 +67,6 @@
           <Property Name="ID_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="Surname" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="Patronic" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Photo" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_Authorization_Role">
@@ -140,7 +132,6 @@
         <EntityContainer Name="Хранилище StarFireModelContainer">
           <EntitySet Name="Authorization" EntityType="Self.Authorization" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Photo" EntityType="Self.Photo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -196,13 +187,6 @@
           <NavigationProperty Name="Products" Relationship="Self.FK_Orders_Products" FromRole="Orders" ToRole="Products" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Orders_Users" FromRole="Orders" ToRole="Users" />
         </EntityType>
-        <EntityType Name="Photo">
-          <Key>
-            <PropertyRef Name="ID_photo" />
-          </Key>
-          <Property Name="ID_photo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="photo1" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
-        </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="ID_prod" />
@@ -249,7 +233,6 @@
           <Property Name="ID_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Surname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Patronic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Authorization" Relationship="Self.FK_Authorization_Users" FromRole="Users" ToRole="Authorization" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
@@ -317,7 +300,6 @@
         <EntityContainer Name="StarFireEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Authorization" EntityType="Self.Authorization" />
           <EntitySet Name="Orders" EntityType="Self.Orders" />
-          <EntitySet Name="Photo" EntityType="Self.Photo" />
           <EntitySet Name="Products" EntityType="Self.Products" />
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -372,14 +354,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Photo">
-            <EntityTypeMapping TypeName="StarFireModel.Photo">
-              <MappingFragment StoreEntitySet="Photo">
-                <ScalarProperty Name="ID_photo" ColumnName="ID_photo" />
-                <ScalarProperty Name="photo1" ColumnName="photo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="StarFireModel.Products">
               <MappingFragment StoreEntitySet="Products">
@@ -425,7 +399,6 @@
                 <ScalarProperty Name="ID_user" ColumnName="ID_user" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
-                <ScalarProperty Name="Patronic" ColumnName="Patronic" />
                 <ScalarProperty Name="Photo" ColumnName="Photo" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -97,9 +97,6 @@
     <Compile Include="db\Orders.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="db\Photo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="db\Products.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

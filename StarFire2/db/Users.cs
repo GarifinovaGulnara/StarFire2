@@ -23,7 +23,6 @@ namespace StarFire2.db
         public int ID_user { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public string Patronic { get; set; }
         public byte[] Photo { get; set; }
     
         public virtual ICollection<Authorization> Authorization { get; set; }

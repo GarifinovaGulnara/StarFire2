@@ -10,7 +10,7 @@
 
     <Grid Background="White">
         <Image HorizontalAlignment="Left" Height="150" Margin="805,245,0,0" VerticalAlignment="Top" Width="150" Source="/img/Laila.jpg"/>
-        <Image HorizontalAlignment="Left" Height="150" Margin="185,55,0,0" VerticalAlignment="Top" Width="150" Source="/img/Gulnara.jpg"/>
+        <Image HorizontalAlignment="Left" Height="150" Margin="185,55,0,0" VerticalAlignment="Top" Width="150" Source="/img/Gulnara.jpg" Style="{DynamicResource ImageStyle}"/>
         <Image HorizontalAlignment="Left" Height="150" Margin="185,245,0,0" VerticalAlignment="Top" Width="150" Source="/img/Alina.jpg"/>
         <Image HorizontalAlignment="Left" Height="150" Margin="805,55,0,0" VerticalAlignment="Top" Width="150" Source="/img/Ailina.jpg"/>
         <Label Content="Портной" HorizontalAlignment="Left" Margin="1005,55,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="28" Foreground="#FF515151"/>

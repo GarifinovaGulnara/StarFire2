@@ -23,9 +23,15 @@ namespace StarFire.Windows
     /// </summary>
     public partial class AboutUsWindow : Window
     {
-        public AboutUsWindow()
+        public int ID;
+        public AboutUsWindow(int id)
         {
             InitializeComponent();
+            ID = id;
+            if (ID==1)
+            {
+                ProfilPageBtn.Visibility = Visibility.Hidden;
+            }
         }
 
         private void ProfilPageBtn_Click(object sender, RoutedEventArgs e)

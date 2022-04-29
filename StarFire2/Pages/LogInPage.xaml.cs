@@ -46,7 +46,7 @@ namespace StarFire.Pages
                 if (user.Password == PassTB.Password.Trim() && user.ID_role==2 && user.Phone == PhoneTB.Text.Trim())
                 {
                     MessageBox.Show($"Добро пожаловать Клиент {user.Phone}");
-                    AboutUsWindow aboutus = new AboutUsWindow();
+                    AboutUsWindow aboutus = new AboutUsWindow(user.ID_role);
                     aboutus.Show();
                     Application.Current.MainWindow.Close();
                 }
@@ -54,7 +54,7 @@ namespace StarFire.Pages
                 if (user.Password == PassTB.Password.Trim() && user.ID_role == 1 && user.Phone == PhoneTB.Text.Trim())
                 {
                     MessageBox.Show($" Добро пожаловать Админ {user.Phone}");
-                    AboutUsWindow aboutus = new AboutUsWindow();
+                    AboutUsWindow aboutus = new AboutUsWindow(user.ID_role);
                     aboutus.Show();
                     Application.Current.MainWindow.Close();
                 }

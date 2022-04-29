@@ -27,7 +27,6 @@ namespace StarFire2.db
     
         public DbSet<Authorization> Authorization { get; set; }
         public DbSet<Orders> Orders { get; set; }
-        public DbSet<Photo> Photo { get; set; }
         public DbSet<Products> Products { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }

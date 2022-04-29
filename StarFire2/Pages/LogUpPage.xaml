@@ -10,30 +10,32 @@
 
 
     <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBox x:Name="FIOLb" Grid.Row="1"
+        <TextBox x:Name="NameLb"
             Style="{DynamicResource StyleTB}" 
             BorderBrush="#FFCD07" 
             Background="#FFFBD4" 
             Padding="10" 
             BorderThickness="2" 
-            Text="ФИО" 
+            Text="Имя" 
             FontSize="24" 
             Foreground="#ED9300" 
             Width="280" 
-            Height="60" Margin="210,40,230,240"/>
-        <Image Grid.Column="1" Source="/img/LogUpFon.PNG" Margin="98,89,108,74" Grid.RowSpan="3"/>
-        <TextBox x:Name="PhoneLb" Grid.Row="1" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Телефон" FontSize="24" Foreground="#ED9300" Width="280" Height="60" Margin="212,150,228,130"/>
-        <PasswordBox Style="{DynamicResource StylePass}" x:Name="PassLb" Grid.Row="1" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Password="Пароль" FontSize="24" Foreground="#ED9300" Width="280" Height="60" Margin="210,250,230,30"/>
-        <Button Grid.Row="2" x:Name="LogUpAppBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Width="270" Height="50" FontSize="24" Foreground="White" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="215,55,0,0" VerticalAlignment="Top" Click="LogUpAppBtn_Click"/>
-        <Button Grid.Row="0" x:Name="BackBtn" Style="{DynamicResource StyleBtn}" Content="Назад" Foreground="White" FontSize="20" Background="#AFA2CE" Width="80" Height="50"  HorizontalAlignment="Left" Margin="45,30,0,0" VerticalAlignment="Top" Click="BackBtn_Click"/>
+            Height="60" Margin="160,80,960,500"/>
+        <Image Source="/img/LogUpFon.PNG" Margin="719,89,108,74"/>
+        <TextBox x:Name="PhoneLb" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Телефон" FontSize="24" Foreground="#ED9300" Width="280" Height="60" Margin="150,290,960,290"/>
+        <PasswordBox Style="{DynamicResource StylePass}" x:Name="PassLb" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Password="Пароль" FontSize="24" Foreground="#ED9300" Width="280" Height="60" Margin="160,395,980,170"/>
+        <Button x:Name="LogUpAppBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Width="270" Height="50" FontSize="24" Foreground="White" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="200,520,0,0" VerticalAlignment="Top" Click="LogUpAppBtn_Click"/>
+        <Button x:Name="BackBtn" Style="{DynamicResource StyleBtn}" Content="Назад" Foreground="White" FontSize="20" Background="#AFA2CE" Width="80" Height="50"  HorizontalAlignment="Left" Margin="45,30,0,0" VerticalAlignment="Top" Click="BackBtn_Click"/>
+        <TextBox x:Name="SurnameLb"
+            Style="{DynamicResource StyleTB}" 
+            BorderBrush="#FFCD07" 
+            Background="#FFFBD4" 
+            Padding="10" 
+            BorderThickness="2" 
+            Text="Фамилия" 
+            FontSize="24" 
+            Foreground="#ED9300" 
+            Width="280" 
+            Height="60" Margin="160,190,960,390"/>
     </Grid>
 </Page>
