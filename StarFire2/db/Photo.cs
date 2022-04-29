@@ -14,16 +14,7 @@ namespace StarFire2.db
     
     public partial class Photo
     {
-        public Photo()
-        {
-            this.Products = new HashSet<Products>();
-            this.Users = new HashSet<Users>();
-        }
-    
         public int ID_photo { get; set; }
         public byte[] photo1 { get; set; }
-    
-        public virtual ICollection<Products> Products { get; set; }
-        public virtual ICollection<Users> Users { get; set; }
     }
 }

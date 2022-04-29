@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StarFire.Windows;
+using StarFire2;
 using StarFire2.db;
 
 namespace StarFire.Pages
@@ -22,7 +23,6 @@ namespace StarFire.Pages
     /// </summary>
     public partial class LogInPage : Page
     {
-        public static StarFireEntities dba = new StarFireEntities();
         public LogInPage()
         {
             InitializeComponent();
@@ -41,23 +41,24 @@ namespace StarFire.Pages
             {
                 MessageBox.Show("");
             }
-            foreach(var user in dba.Authorization)
+            foreach(var user in App.starFireEntities.Authorization)
             {
-                if (user.Password == PassTB.Password.Trim() && user.ID_role==2)
+                if (user.Password == PassTB.Password.Trim() && user.ID_role==2 && user.Phone == PhoneTB.Text.Trim())
                 {
-                    MessageBox.Show($"{user.Phone}");
+                    MessageBox.Show($"Добро пожаловать Клиент {user.Phone}");
                     AboutUsWindow aboutus = new AboutUsWindow();
                     aboutus.Show();
                     Application.Current.MainWindow.Close();
                 }
 
-                if (user.Password == PassTB.Password.Trim() && user.ID_role == 1)
+                if (user.Password == PassTB.Password.Trim() && user.ID_role == 1 && user.Phone == PhoneTB.Text.Trim())
                 {
-                    MessageBox.Show($"{user.Phone}");
+                    MessageBox.Show($" Добро пожаловать Админ {user.Phone}");
                     AboutUsWindow aboutus = new AboutUsWindow();
                     aboutus.Show();
                     Application.Current.MainWindow.Close();
                 }
+                App.user = user;
             }
             
         }

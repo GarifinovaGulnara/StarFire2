@@ -15,5 +15,6 @@ namespace StarFire2
     public partial class App : Application
     {
         public static StarFireEntities starFireEntities = new StarFireEntities();
+        public static Authorization user;
     }
 }

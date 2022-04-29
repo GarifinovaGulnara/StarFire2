@@ -18,7 +18,7 @@ namespace StarFire2.db
         public string Password { get; set; }
         public int ID_user { get; set; }
         public int ID_role { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
     
         public virtual Role Role { get; set; }
         public virtual Users Users { get; set; }

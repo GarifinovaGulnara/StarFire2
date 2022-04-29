@@ -24,10 +24,9 @@ namespace StarFire2.db
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Patronic { get; set; }
-        public Nullable<int> ID_photo { get; set; }
+        public byte[] Photo { get; set; }
     
         public virtual ICollection<Authorization> Authorization { get; set; }
         public virtual ICollection<Orders> Orders { get; set; }
-        public virtual Photo Photo { get; set; }
     }
 }

@@ -11,7 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using StarFire.AdminPages;
 using StarFire.Pages;
+using StarFire2;
+using StarFire2.db;
 
 namespace StarFire.Windows
 {
@@ -37,12 +40,26 @@ namespace StarFire.Windows
 
         private void OrderPageBtn_Click(object sender, RoutedEventArgs e)
         {
-            SecondFrame.Navigate(new OrderingPage());
+                if (App.user.ID_role == 1)
+                {
+                    SecondFrame.Navigate(new AOrdersPage());
+                }
+                else
+                {
+                    SecondFrame.Navigate(new OrderingPage());
+                }
         }
 
         private void CatalogPageBtn_Click(object sender, RoutedEventArgs e)
         {
-            SecondFrame.Navigate(new CatalogPage());
+                if (App.user.ID_role == 1)
+                {
+                    SecondFrame.Navigate(new ACatalogPage());
+                }
+                else
+                {
+                    SecondFrame.Navigate(new CatalogPage());
+                }
         }
     }
 }

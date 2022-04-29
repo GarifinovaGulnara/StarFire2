@@ -9,17 +9,17 @@
           <Key>
             <PropertyRef Name="ID_auth" />
           </Key>
-          <Property Name="ID_auth" Type="int" Nullable="false" />
+          <Property Name="ID_auth" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="ID_user" Type="int" Nullable="false" />
           <Property Name="ID_role" Type="int" Nullable="false" />
-          <Property Name="Phone" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="nchar" MaxLength="11" Nullable="false" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
             <PropertyRef Name="ID_order" />
           </Key>
-          <Property Name="ID_order" Type="int" Nullable="false" />
+          <Property Name="ID_order" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" />
           <Property Name="ID_prod" Type="int" Nullable="false" />
           <Property Name="ID_user" Type="int" Nullable="false" />
@@ -29,25 +29,25 @@
           <Key>
             <PropertyRef Name="ID_photo" />
           </Key>
-          <Property Name="ID_photo" Type="int" Nullable="false" />
+          <Property Name="ID_photo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="photo" Type="varbinary" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="ID_prod" />
           </Key>
-          <Property Name="ID_prod" Type="int" Nullable="false" />
+          <Property Name="ID_prod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="50" />
           <Property Name="Price" Type="int" Nullable="false" />
           <Property Name="ID_type" Type="int" Nullable="false" />
-          <Property Name="ID_photo" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="ID_role" />
           </Key>
-          <Property Name="ID_role" Type="int" Nullable="false" />
+          <Property Name="ID_role" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -64,18 +64,18 @@
           <Key>
             <PropertyRef Name="ID_type" />
           </Key>
-          <Property Name="ID_type" Type="int" Nullable="false" />
+          <Property Name="ID_type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="ID_user" />
           </Key>
-          <Property Name="ID_user" Type="int" Nullable="false" />
+          <Property Name="ID_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="Surname" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Patronic" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="ID_photo" Type="int" />
+          <Property Name="Photo" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_Authorization_Role">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
@@ -125,18 +125,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Products_Photo">
-          <End Role="Photo" Type="Self.Photo" Multiplicity="1" />
-          <End Role="Products" Type="Self.Products" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Photo">
-              <PropertyRef Name="ID_photo" />
-            </Principal>
-            <Dependent Role="Products">
-              <PropertyRef Name="ID_photo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Products_TypeOfProducts">
           <End Role="TypeOfProducts" Type="Self.TypeOfProducts" Multiplicity="1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
@@ -146,18 +134,6 @@
             </Principal>
             <Dependent Role="Products">
               <PropertyRef Name="ID_type" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_Photo">
-          <End Role="Photo" Type="Self.Photo" Multiplicity="0..1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Photo">
-              <PropertyRef Name="ID_photo" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="ID_photo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -186,17 +162,9 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK_Products_Photo" Association="Self.FK_Products_Photo">
-            <End Role="Photo" EntitySet="Photo" />
-            <End Role="Products" EntitySet="Products" />
-          </AssociationSet>
           <AssociationSet Name="FK_Products_TypeOfProducts" Association="Self.FK_Products_TypeOfProducts">
             <End Role="TypeOfProducts" EntitySet="TypeOfProducts" />
             <End Role="Products" EntitySet="Products" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_Photo" Association="Self.FK_Users_Photo">
-            <End Role="Photo" EntitySet="Photo" />
-            <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -208,11 +176,11 @@
           <Key>
             <PropertyRef Name="ID_auth" />
           </Key>
-          <Property Name="ID_auth" Type="Int32" Nullable="false" />
+          <Property Name="ID_auth" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ID_user" Type="Int32" Nullable="false" />
           <Property Name="ID_role" Type="Int32" Nullable="false" />
-          <Property Name="Phone" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Role" Relationship="Self.FK_Authorization_Role" FromRole="Authorization" ToRole="Role" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Authorization_Users" FromRole="Authorization" ToRole="Users" />
         </EntityType>
@@ -220,7 +188,7 @@
           <Key>
             <PropertyRef Name="ID_order" />
           </Key>
-          <Property Name="ID_order" Type="Int32" Nullable="false" />
+          <Property Name="ID_order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID_prod" Type="Int32" Nullable="false" />
           <Property Name="ID_user" Type="Int32" Nullable="false" />
@@ -232,30 +200,27 @@
           <Key>
             <PropertyRef Name="ID_photo" />
           </Key>
-          <Property Name="ID_photo" Type="Int32" Nullable="false" />
+          <Property Name="ID_photo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="photo1" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Products_Photo" FromRole="Photo" ToRole="Products" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Photo" FromRole="Photo" ToRole="Users" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="ID_prod" />
           </Key>
-          <Property Name="ID_prod" Type="Int32" Nullable="false" />
+          <Property Name="ID_prod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Int32" Nullable="false" />
           <Property Name="ID_type" Type="Int32" Nullable="false" />
-          <Property Name="ID_photo" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Products" FromRole="Products" ToRole="Orders" />
-          <NavigationProperty Name="Photo" Relationship="Self.FK_Products_Photo" FromRole="Products" ToRole="Photo" />
           <NavigationProperty Name="TypeOfProducts" Relationship="Self.FK_Products_TypeOfProducts" FromRole="Products" ToRole="TypeOfProducts" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="ID_role" />
           </Key>
-          <Property Name="ID_role" Type="Int32" Nullable="false" />
+          <Property Name="ID_role" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Authorization" Relationship="Self.FK_Authorization_Role" FromRole="Role" ToRole="Authorization" />
         </EntityType>
@@ -273,7 +238,7 @@
           <Key>
             <PropertyRef Name="ID_type" />
           </Key>
-          <Property Name="ID_type" Type="Int32" Nullable="false" />
+          <Property Name="ID_type" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Products_TypeOfProducts" FromRole="TypeOfProducts" ToRole="Products" />
         </EntityType>
@@ -281,14 +246,13 @@
           <Key>
             <PropertyRef Name="ID_user" />
           </Key>
-          <Property Name="ID_user" Type="Int32" Nullable="false" />
+          <Property Name="ID_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Surname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Patronic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ID_photo" Type="Int32" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Authorization" Relationship="Self.FK_Authorization_Users" FromRole="Users" ToRole="Authorization" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
-          <NavigationProperty Name="Photo" Relationship="Self.FK_Users_Photo" FromRole="Users" ToRole="Photo" />
         </EntityType>
         <Association Name="FK_Authorization_Role">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
@@ -335,30 +299,6 @@
             </Principal>
             <Dependent Role="Orders">
               <PropertyRef Name="ID_user" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Products_Photo">
-          <End Role="Photo" Type="Self.Photo" Multiplicity="1" />
-          <End Role="Products" Type="Self.Products" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Photo">
-              <PropertyRef Name="ID_photo" />
-            </Principal>
-            <Dependent Role="Products">
-              <PropertyRef Name="ID_photo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_Photo">
-          <End Role="Photo" Type="Self.Photo" Multiplicity="0..1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Photo">
-              <PropertyRef Name="ID_photo" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="ID_photo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -398,14 +338,6 @@
           <AssociationSet Name="FK_Orders_Users" Association="Self.FK_Orders_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Products_Photo" Association="Self.FK_Products_Photo">
-            <End Role="Photo" EntitySet="Photo" />
-            <End Role="Products" EntitySet="Products" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_Photo" Association="Self.FK_Users_Photo">
-            <End Role="Photo" EntitySet="Photo" />
-            <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <AssociationSet Name="FK_Products_TypeOfProducts" Association="Self.FK_Products_TypeOfProducts">
             <End Role="TypeOfProducts" EntitySet="TypeOfProducts" />
@@ -456,7 +388,7 @@
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="ID_type" ColumnName="ID_type" />
-                <ScalarProperty Name="ID_photo" ColumnName="ID_photo" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -494,7 +426,7 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="Patronic" ColumnName="Patronic" />
-                <ScalarProperty Name="ID_photo" ColumnName="ID_photo" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

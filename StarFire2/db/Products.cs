@@ -24,10 +24,9 @@ namespace StarFire2.db
         public string Description { get; set; }
         public int Price { get; set; }
         public int ID_type { get; set; }
-        public int ID_photo { get; set; }
+        public byte[] Photo { get; set; }
     
         public virtual ICollection<Orders> Orders { get; set; }
-        public virtual Photo Photo { get; set; }
         public virtual TypeOfProducts TypeOfProducts { get; set; }
     }
 }

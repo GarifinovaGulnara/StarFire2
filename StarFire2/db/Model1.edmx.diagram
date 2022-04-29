@@ -4,21 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e36ffeb433b2495d8558d44589a8f9b0" Name="Diagram1">
-        <EntityTypeShape EntityType="StarFireModel.Authorization" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="StarFireModel.Orders" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="StarFireModel.Photo" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="StarFireModel.Products" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="StarFireModel.Role" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="StarFireModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="StarFireModel.TypeOfProducts" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="StarFireModel.Users" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+      <Diagram DiagramId="aa3bd871c9e44d44bd62cf755c4c995c" Name="Diagram1">
+        <EntityTypeShape EntityType="StarFireModel.Authorization" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarFireModel.Orders" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarFireModel.Photo" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarFireModel.Products" Width="1.5" PointX="3.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarFireModel.Role" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarFireModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarFireModel.TypeOfProducts" Width="1.5" PointX="1.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarFireModel.Users" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
         <AssociationConnector Association="StarFireModel.FK_Authorization_Role" ManuallyRouted="false" />
         <AssociationConnector Association="StarFireModel.FK_Authorization_Users" ManuallyRouted="false" />
         <AssociationConnector Association="StarFireModel.FK_Orders_Products" ManuallyRouted="false" />
         <AssociationConnector Association="StarFireModel.FK_Orders_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="StarFireModel.FK_Products_Photo" ManuallyRouted="false" />
-        <AssociationConnector Association="StarFireModel.FK_Users_Photo" ManuallyRouted="false" />
         <AssociationConnector Association="StarFireModel.FK_Products_TypeOfProducts" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

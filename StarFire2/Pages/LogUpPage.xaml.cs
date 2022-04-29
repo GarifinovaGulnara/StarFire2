@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StarFire.Windows;
+using StarFire2;
+using StarFire2.db;
 
 namespace StarFire.Pages
 {
@@ -28,9 +30,34 @@ namespace StarFire.Pages
 
         private void LogUpAppBtn_Click(object sender, RoutedEventArgs e)
         {
-            AboutUsWindow aboutus = new AboutUsWindow();
-            aboutus.Show();
-            Application.Current.MainWindow.Close();
+            if (FIOLb.Text=="" || PhoneLb.Text == "" || PassLb.Password == "")
+            {
+                MessageBox.Show("Введите все данные");
+            }
+            else
+            {
+                Users us = new Users();
+                {
+                    us.Name = FIOLb.Text;
+                }
+                App.starFireEntities.Users.Add(us);
+                App.starFireEntities.SaveChanges();
+                Authorization aut = new Authorization();
+                {
+                    aut.Phone = PhoneLb.Text;
+                    aut.Password = PassLb.Password;
+                    aut.ID_role = 2;
+                    aut.ID_user = us.ID_user;
+                }
+                App.starFireEntities.Authorization.Add(aut);
+                App.starFireEntities.SaveChanges();
+                MessageBox.Show("ok");
+
+
+                AboutUsWindow aboutus = new AboutUsWindow();
+                aboutus.Show();
+                Application.Current.MainWindow.Close();
+            }
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
