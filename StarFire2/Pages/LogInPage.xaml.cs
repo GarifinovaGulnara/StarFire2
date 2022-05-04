@@ -49,6 +49,7 @@ namespace StarFire.Pages
                     AboutUsWindow aboutus = new AboutUsWindow(user.ID_role);
                     aboutus.Show();
                     Application.Current.MainWindow.Close();
+                App.user = user;
                 }
 
                 if (user.Password == PassTB.Password.Trim() && user.ID_role == 1 && user.Phone == PhoneTB.Text.Trim())
@@ -57,8 +58,8 @@ namespace StarFire.Pages
                     AboutUsWindow aboutus = new AboutUsWindow(user.ID_role);
                     aboutus.Show();
                     Application.Current.MainWindow.Close();
+                    App.user = user;
                 }
-                App.user = user;
             }
             
         }

@@ -9,31 +9,32 @@
       Title="CatalogPage">
 
     <Grid Background="White">
-        <Image HorizontalAlignment="Left" Height="150" Margin="155,41,0,0" VerticalAlignment="Top" Width="150"/>
-        <Image HorizontalAlignment="Left" Height="150" Margin="155,236,0,0" VerticalAlignment="Top" Width="150"/>
-        <Image HorizontalAlignment="Left" Height="150" Margin="804,41,0,0" VerticalAlignment="Top" Width="150"/>
-        <Image HorizontalAlignment="Left" Height="150" Margin="804,236,0,0" VerticalAlignment="Top" Width="150"/>
-        <Label Content="Вид" FontSize="24" HorizontalAlignment="Left" Margin="350,41,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label Content="Описание" FontSize="20" HorizontalAlignment="Left" Margin="350,111,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A"/>
-        <Label Content="Номер заказa" FontSize="20" HorizontalAlignment="Left" Margin="350,81,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab1" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="515,81,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label Content="Вид" FontSize="24" HorizontalAlignment="Left" Margin="350,236,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label Content="Описание" FontSize="20" HorizontalAlignment="Left" Margin="350,301,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A"/>
-        <Label Content="Номер заказa" FontSize="20" HorizontalAlignment="Left" Margin="350,271,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab2" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="515,271,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label Content="Вид" FontSize="24" HorizontalAlignment="Left" Margin="1000,41,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label Content="Описание" FontSize="20" HorizontalAlignment="Left" Margin="999,111,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A"/>
-        <Label Content="Номер заказa" FontSize="20" HorizontalAlignment="Left" Margin="1000,81,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab3" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="1165,81,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label Content="Вид" FontSize="24" HorizontalAlignment="Left" Margin="1000,236,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label Content="Описание" FontSize="20" HorizontalAlignment="Left" Margin="999,305,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A"/>
-        <Label Content="Номер заказa" FontSize="20" HorizontalAlignment="Left" Margin="1000,275,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab4" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="1165,275,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Button x:Name="PurchasePageBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="100" Content="Купить" HorizontalAlignment="Left" Margin="1247,350,0,0" VerticalAlignment="Top" Click="PurchasePageBtn_Click"/>
-        <Label Style="{DynamicResource StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="350,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="350,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="1000,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="1000,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Image x:Name="img1" Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="107,41,0,0" VerticalAlignment="Top" Width="150"/>
+        <Image x:Name="img2"  Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="107,236,0,0" VerticalAlignment="Top" Width="150"/>
+        <Image x:Name="img3" Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="756,41,0,0" VerticalAlignment="Top" Width="150"/>
+        <Image x:Name="img4" Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="756,236,0,0" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="Des1" Text="Описание" BorderBrush="White" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="302,89,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="64" Width="299"/>
+        <Label Content="Номер товара" FontSize="20" HorizontalAlignment="Left" Margin="302,47,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <Label x:Name="NumberOrderLab1" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="467,47,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <TextBox x:Name="Des2" Text="Описание" BorderBrush="White" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="302,279,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="69" Width="299"/>
+        <Label Content="Номер товарa" FontSize="20" HorizontalAlignment="Left" Margin="302,237,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <Label x:Name="NumberOrderLab2" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="467,237,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <TextBox x:Name="Des3" Text="Описание" BorderBrush="White" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="951,87,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="66" Width="290"/>
+        <Label Content="Номер товарa" FontSize="20" HorizontalAlignment="Left" Margin="952,45,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <Label x:Name="NumberOrderLab3" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="1117,45,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <TextBox x:Name="Des4" BorderBrush="White" Text="Описание" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="951,283,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="65" Width="290"/>
+        <Label Content="Номер товара" FontSize="20" HorizontalAlignment="Left" Margin="952,241,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <Label x:Name="NumberOrderLab4" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="1117,241,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
+        <Button x:Name="PurchasePageBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="100" Content="Купить" HorizontalAlignment="Left" Margin="1265,350,0,0" VerticalAlignment="Top" Click="PurchasePageBtn_Click"/>
+        <Label x:Name="PrProd1" Style="{DynamicResource StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="302,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="PrProd2" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="302,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="PrProd3" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="952,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="PrProd4" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="952,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="RightArrowBtn" Style="{DynamicResource ResourceKey=StyleBtn}" HorizontalAlignment="Left" Margin="1330,41,0,0" VerticalAlignment="Top" Width="48" Height="42">
+            <Button.Background>
+                <ImageBrush ImageSource="/StarFire2;component/img/RightArrow.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>

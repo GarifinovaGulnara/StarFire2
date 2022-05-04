@@ -118,6 +118,9 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\UpdateProfilWindow.xaml.cs">
+      <DependentUpon>UpdateProfilWindow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\AboutUsPage.xaml.cs">
@@ -237,6 +240,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\UpdateProfilWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\AboutUsFirstImg.PNG" />
@@ -253,6 +260,10 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\RightArrow.png" />
+    <Resource Include="img\LeftArrow.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="db\Model1.Context.tt">

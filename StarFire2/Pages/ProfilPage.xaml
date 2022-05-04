@@ -9,13 +9,13 @@
       Title="ProfilPage">
 
     <Grid Background="White">
-        <Image HorizontalAlignment="Left" Height="250" Margin="90,60,0,0" VerticalAlignment="Top" Width="250" Source="/img/profil.png"/>
-        <Button x:Name="UpdateProfilBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="200" Content="Редактировать" HorizontalAlignment="Left" Margin="110,335,0,0" VerticalAlignment="Top"/>
-        <Label Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,80,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="10" FontSize="24"/>
-        <Label Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,160,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="10" FontSize="24"/>
-        <Label Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,240,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="10" FontSize="24"/>
+        <Image Style="{DynamicResource ImageStyle}" x:Name="ImgUser" HorizontalAlignment="Left" Height="250" Margin="90,60,0,0" VerticalAlignment="Top" Width="250" Source="/img/profil.png"/>
+        <Button x:Name="UpdateProfilBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="200" Content="Редактировать" HorizontalAlignment="Left" Margin="110,335,0,0" VerticalAlignment="Top" Click="UpdateProfilBtn_Click"/>
+        <Label x:Name="FILb" Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,80,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="380" Padding="5" FontSize="24"/>
+        <Label x:Name="PhoneLb" Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,160,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="5" FontSize="24"/>
+        <Label x:Name="PassLb" Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,240,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="5" FontSize="24"/>
         <Label Content="Мои заказы" FontSize="24" Foreground="#7A7A7A" HorizontalAlignment="Left" Margin="1015,58,0,0" VerticalAlignment="Top"/>
-        <ListView Width="400" Height="250" Margin="885,105,155,95">
+        <ListView Width="400" Height="250" Margin="895,105,145,94.6">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

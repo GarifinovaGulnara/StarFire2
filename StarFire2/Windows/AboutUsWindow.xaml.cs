@@ -46,26 +46,26 @@ namespace StarFire.Windows
 
         private void OrderPageBtn_Click(object sender, RoutedEventArgs e)
         {
-                if (App.user.ID_role == 1)
-                {
-                    SecondFrame.Navigate(new AOrdersPage());
-                }
-                else
-                {
-                    SecondFrame.Navigate(new OrderingPage());
-                }
+            if (ID==1)
+            {
+                SecondFrame.Navigate(new AOrdersPage());
+            }
+            else
+            {
+                SecondFrame.Navigate(new OrderingPage());
+            }
         }
 
         private void CatalogPageBtn_Click(object sender, RoutedEventArgs e)
         {
-                if (App.user.ID_role == 1)
-                {
-                    SecondFrame.Navigate(new ACatalogPage());
-                }
-                else
-                {
-                    SecondFrame.Navigate(new CatalogPage());
-                }
+            if (ID==1)
+            {
+                SecondFrame.Navigate(new ACatalogPage());
+            }
+            else
+            {
+                SecondFrame.Navigate(new CatalogPage());
+            }
         }
     }
 }
