@@ -36,6 +36,7 @@ namespace StarFire.Pages
             PhoneLb.Content = App.user.Phone;
             PassLb.Content = App.user.Password;
             ImgUser.Source = ByteArrayToImage(App.user.Users.Photo);
+            UsersLV.ItemsSource = App.starFireEntities.Orders.Where(x => x.ID_user == App.user.ID_user).ToList();
         }
         private void UpdateProfilBtn_Click(object sender, RoutedEventArgs e)
         {

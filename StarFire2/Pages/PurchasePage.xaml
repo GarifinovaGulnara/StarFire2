@@ -9,11 +9,13 @@
       Title="PurchasePage">
 
     <Grid Background="White">
-        <TextBox Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Телефон" FontSize="24" Foreground="#ED9300" Width="250" Height="60" Margin="200,240,940,150"/>
-        <TextBox Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Адрес" FontSize="24" Foreground="#ED9300" Width="250" Height="60" Margin="200,160,940,230"/>
-        <TextBox Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Номер товара" FontSize="24" Foreground="#ED9300" Width="250" Height="60" Margin="200,80,940,310"/>
-        <Button x:Name="PurchasePageBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="130" Content="Купить" HorizontalAlignment="Left" Margin="280,350,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Waist" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Об.талии" FontSize="24" Foreground="#ED9300" Height="60" Margin="82,255,1149,134.6"/>
+        <TextBox x:Name="LengtProd" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Длина из." FontSize="24" Foreground="#ED9300" Height="60" Margin="81,175,1149,214.6"/>
+        <TextBox x:Name="NumberProd" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Номер товара" FontSize="24" Foreground="#ED9300" Width="250" Height="60" Margin="200,80,940,310"/>
+        <Button x:Name="PurchasePageBtn" Style="{DynamicResource StyleBtn}" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="130" Content="Купить" HorizontalAlignment="Left" Margin="280,350,0,0" VerticalAlignment="Top" Click="PurchasePageBtn_Click"/>
         <Image HorizontalAlignment="Left" Height="346" Margin="800,50,0,0" VerticalAlignment="Top" Width="420" Source="/img/PurchaseImg.PNG"/>
+        <TextBox x:Name="Hips" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Об.бёдер" FontSize="24" Foreground="#ED9300" Height="60" Margin="354,255,876,134.6"/>
+        <TextBox x:Name="Bust" Style="{DynamicResource StyleTB}" BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" Text="Об.груди" FontSize="24" Foreground="#ED9300" Height="60" Margin="354,175,876,214.6"/>
 
     </Grid>
 </Page>

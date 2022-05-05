@@ -15,10 +15,17 @@
         <Label x:Name="PhoneLb" Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,160,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="5" FontSize="24"/>
         <Label x:Name="PassLb" Style="{DynamicResource StyleLab}" Content="" HorizontalAlignment="Left" Margin="425,240,0,0" VerticalAlignment="Top" Background="#FFFFFBD4" Foreground="#FFED9300" BorderBrush="#FFCD07" BorderThickness="2" Height="50" Width="300" Padding="5" FontSize="24"/>
         <Label Content="Мои заказы" FontSize="24" Foreground="#7A7A7A" HorizontalAlignment="Left" Margin="1015,58,0,0" VerticalAlignment="Top"/>
-        <ListView Width="400" Height="250" Margin="895,105,145,94.6">
+        <ListView x:Name="UsersLV" Width="400" Height="250" Margin="895,105,145,94.6">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ID_order}" Header="№"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Description}" Header="Описание"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding LenghtProd}" Header="Длина изделия"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Bust}" Header="Обхват груди"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Waist}" Header="Обхват талии"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Hips}" Header="Обхват бедер"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ID_prod}" Header="№ товара"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Ready}" Header="Готово?"/>
                 </GridView>
             </ListView.View>
         </ListView>

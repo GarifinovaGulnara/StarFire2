@@ -9,10 +9,19 @@
       Title="AOrdersPage">
 
     <Grid Background="White">
-        <ListView Margin="140,75,140,45">
+        <ListView x:Name="AllOrderLV" Margin="140,75,140,45" SelectionChanged="AllOrderLV_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ID_order}" Header="№"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Description}" Header="Описание"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Имя"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Phone}" Header="Телефон"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding LenghtProd}" Header="Длина изделия"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Bust}" Header="Обхват груди"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Waist}" Header="Обхват талии"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Hips}" Header="Обхват бедер"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ID_prod}" Header="№ товара"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Ready}" Header="Готово?"/>
                 </GridView>
             </ListView.View>
         </ListView>

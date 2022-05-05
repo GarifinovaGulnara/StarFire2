@@ -11,7 +11,7 @@
     <Grid Background="White">
         <Button x:Name="AddProductPageBtn" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="200" Content="Добавить товар" HorizontalAlignment="Left" Margin="1200,226,0,0" VerticalAlignment="Top" Style="{DynamicResource StyleBtn}" Click="AddProductPageBtn_Click"/>
         <Button x:Name="DeleteProdactBtn" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="200" Content="Удалить товар" HorizontalAlignment="Left" Margin="1200,370,0,0" VerticalAlignment="Top" Style="{DynamicResource StyleBtn}" Click="DeleteProdactBtn_Click"/>
-        <ComboBox x:Name="ListProdCB" HorizontalAlignment="Left" Margin="1200,300,0,0" VerticalAlignment="Top" Width="200" Height="60"/>
+        <ComboBox x:Name="ListProdCB" HorizontalAlignment="Left" Margin="1200,300,0,0" VerticalAlignment="Top" Width="200" Height="48"/>
         <Button x:Name="RightArrowBtn" Style="{DynamicResource StyleBtn}" HorizontalAlignment="Left" Margin="1330,41,0,0" VerticalAlignment="Top" Width="48" Height="42" Click="RightArrowBtn_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/StarFire2;component/img/RightArrow.png"/>
@@ -37,6 +37,11 @@
         <Label x:Name="PrProd2" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="302,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="PrProd3" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="876,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="PrProd4" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="876,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="LeftArrowBtn" Style="{DynamicResource ResourceKey=StyleBtn}" HorizontalAlignment="Left" Margin="1260,41,0,0" VerticalAlignment="Top" Width="48" Height="42" Click="LeftArrowBtn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/StarFire2;component/img/LeftArrow.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>

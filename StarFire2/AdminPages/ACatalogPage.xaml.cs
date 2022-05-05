@@ -137,5 +137,18 @@ namespace StarFire.AdminPages
             }
             catch { }
         }
+
+        private void LeftArrowBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (x - 4 <= App.starFireEntities.Products.Count())
+            {
+                x -= 4;
+            }
+            else
+            {
+                x = 1;
+            }
+            GetInfoProd();
+        }
     }
 }

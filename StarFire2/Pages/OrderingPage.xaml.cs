@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StarFire2;
+using StarFire2.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,30 @@ namespace StarFire.Pages
         public OrderingPage()
         {
             InitializeComponent();
+        }
+
+        private void SendOrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (DesOrder.Text == "" || BustLb.Text == ""|| WaistLb.Text == "" || HipsLb.Text == "")
+            {
+                MessageBox.Show("Введите все данные");
+            }
+            else
+            {
+                Orders order = new Orders();
+                {
+                    order.Description = DesOrder.Text;
+                    order.Bust = Convert.ToInt32(BustLb.Text);
+                    order.Waist = Convert.ToInt32(WaistLb.Text);
+                    order.Hips = Convert.ToInt32(HipsLb.Text);
+                    order.LenghtProd = Convert.ToInt32(LengProd.Text);
+                    order.ID_user = App.user.ID_user;
+                    App.starFireEntities.SaveChanges();
+                }
+                App.starFireEntities.Orders.Add(order);
+                App.starFireEntities.SaveChanges();
+                MessageBox.Show("Ваш заказ отправлен");
+            }
         }
     }
 }

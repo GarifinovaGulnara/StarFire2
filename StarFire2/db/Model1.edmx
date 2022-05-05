@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище StarFireModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище StarFireModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Authorization">
           <Key>
             <PropertyRef Name="ID_auth" />
@@ -21,9 +21,13 @@
           </Key>
           <Property Name="ID_order" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" />
-          <Property Name="ID_prod" Type="int" Nullable="false" />
+          <Property Name="ID_prod" Type="int" />
           <Property Name="ID_user" Type="int" Nullable="false" />
           <Property Name="Ready" Type="bit" Nullable="false" />
+          <Property Name="LenghtProd" Type="int" />
+          <Property Name="Bust" Type="int" />
+          <Property Name="Waist" Type="int" />
+          <Property Name="Hips" Type="int" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -94,7 +98,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Orders_Products">
-          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Products">
@@ -158,8 +162,7 @@
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StarFireModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -181,9 +184,13 @@
           </Key>
           <Property Name="ID_order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="ID_prod" Type="Int32" Nullable="false" />
+          <Property Name="ID_prod" Type="Int32" />
           <Property Name="ID_user" Type="Int32" Nullable="false" />
           <Property Name="Ready" Type="Boolean" Nullable="false" />
+          <Property Name="LenghtProd" Type="Int32" />
+          <Property Name="Bust" Type="Int32" />
+          <Property Name="Waist" Type="Int32" />
+          <Property Name="Hips" Type="Int32" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Orders_Products" FromRole="Orders" ToRole="Products" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Orders_Users" FromRole="Orders" ToRole="Users" />
         </EntityType>
@@ -262,7 +269,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Orders_Products">
-          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Products">
@@ -351,6 +358,10 @@
                 <ScalarProperty Name="ID_prod" ColumnName="ID_prod" />
                 <ScalarProperty Name="ID_user" ColumnName="ID_user" />
                 <ScalarProperty Name="Ready" ColumnName="Ready" />
+                <ScalarProperty Name="LenghtProd" ColumnName="LenghtProd" />
+                <ScalarProperty Name="Bust" ColumnName="Bust" />
+                <ScalarProperty Name="Waist" ColumnName="Waist" />
+                <ScalarProperty Name="Hips" ColumnName="Hips" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

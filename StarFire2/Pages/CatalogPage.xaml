@@ -35,6 +35,11 @@
                 <ImageBrush ImageSource="/StarFire2;component/img/RightArrow.png"/>
             </Button.Background>
         </Button>
+        <Button x:Name="LeftArrowBtn" Style="{DynamicResource ResourceKey=StyleBtn}" HorizontalAlignment="Left" Margin="1260,41,0,0" VerticalAlignment="Top" Width="48" Height="42" Click="LeftArrowBtn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/StarFire2;component/img/LeftArrow.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>
