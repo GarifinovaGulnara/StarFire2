@@ -15,6 +15,7 @@
         <Image Style="{DynamicResource ImageStyle}" x:Name="ImgProduct" HorizontalAlignment="Left" Height="252" Margin="878,40,0,0" VerticalAlignment="Top" Width="380"/>
         <Button Style="{DynamicResource StyleBtn}" x:Name="SelectionImgBtn" Background="#FF4F61" Width="200" Height="50" FontSize="24" Foreground="White" Content="Выбрать фото" HorizontalAlignment="Left" Margin="966,304,0,0" VerticalAlignment="Top" Click="SelectionImgBtn_Click"/>
         <TextBox BorderBrush="#FFCD07" Background="#FFFBD4" Padding="10" BorderThickness="2" x:Name="PriceProd" HorizontalAlignment="Left" Margin="118,140,0,0" Text="Цена"  VerticalAlignment="Top" FontSize="24" Foreground="#ED9300" Width="196" Height="60" Style="{DynamicResource StyleTB}"/>
+        <ComboBox x:Name="TypeProd" HorizontalAlignment="Left" Margin="118,233,0,0" VerticalAlignment="Top" Width="196" Height="59"/>
 
     </Grid>
 </Page>

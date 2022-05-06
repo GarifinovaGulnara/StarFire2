@@ -12,36 +12,48 @@
         <Button x:Name="AddProductPageBtn" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="200" Content="Добавить товар" HorizontalAlignment="Left" Margin="1200,226,0,0" VerticalAlignment="Top" Style="{DynamicResource StyleBtn}" Click="AddProductPageBtn_Click"/>
         <Button x:Name="DeleteProdactBtn" Background="#FF4F61" Foreground="White" FontSize="24" Height="60" Width="200" Content="Удалить товар" HorizontalAlignment="Left" Margin="1200,370,0,0" VerticalAlignment="Top" Style="{DynamicResource StyleBtn}" Click="DeleteProdactBtn_Click"/>
         <ComboBox x:Name="ListProdCB" HorizontalAlignment="Left" Margin="1200,300,0,0" VerticalAlignment="Top" Width="200" Height="48"/>
-        <Button x:Name="RightArrowBtn" Style="{DynamicResource StyleBtn}" HorizontalAlignment="Left" Margin="1330,41,0,0" VerticalAlignment="Top" Width="48" Height="42" Click="RightArrowBtn_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/StarFire2;component/img/RightArrow.png"/>
-            </Button.Background>
-        </Button>
-        <Image x:Name="img1" Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="107,41,0,0" VerticalAlignment="Top" Width="150"/>
-        <Image x:Name="img2" Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="107,236,0,0" VerticalAlignment="Top" Width="150"/>
-        <Image x:Name="img3" Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="680,41,0,0" VerticalAlignment="Top" Width="150"/>
-        <Image x:Name="img4" Style="{DynamicResource ImageStyle}" HorizontalAlignment="Left" Height="150" Margin="680,236,0,0" VerticalAlignment="Top" Width="150"/>
-        <TextBox x:Name="Des1" BorderBrush="White" Text="Описание" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="302,89,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="64" Width="290"/>
-        <Label Content="Номер товара" FontSize="20" HorizontalAlignment="Left" Margin="302,47,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab1" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="467,47,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <TextBox x:Name="Des2" BorderBrush="White" Text="Описание" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="302,279,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="69" Width="290"/>
-        <Label Content="Номер товарa" FontSize="20" HorizontalAlignment="Left" Margin="302,237,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab2" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="467,237,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <TextBox x:Name="Des3" BorderBrush="White" Text="Описание" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="875,87,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="66" Width="290"/>
-        <Label Content="Номер товарa" FontSize="20" HorizontalAlignment="Left" Margin="876,45,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab3" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="1041,45,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <TextBox x:Name="Des4" BorderBrush="White" Text="Описание" TextWrapping="Wrap" IsEnabled="False" FontSize="18" HorizontalAlignment="Left" Margin="875,283,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" Height="65" Width="290"/>
-        <Label Content="Номер товара" FontSize="20" HorizontalAlignment="Left" Margin="876,241,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="NumberOrderLab4" Content="..." FontSize="20" HorizontalAlignment="Left" Margin="1041,241,0,0" VerticalAlignment="Top" Foreground="#FF7A7A7A" FontWeight="Bold"/>
-        <Label x:Name="PrProd1" Style="{DynamicResource StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="302,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="PrProd2" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="302,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="PrProd3" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="876,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="PrProd4" Style="{DynamicResource ResourceKey=StyleLab}" FontSize="24" Content="1500" Foreground="#7a7a7a"  HorizontalAlignment="Left" Margin="876,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="LeftArrowBtn" Style="{DynamicResource ResourceKey=StyleBtn}" HorizontalAlignment="Left" Margin="1260,41,0,0" VerticalAlignment="Top" Width="48" Height="42" Click="LeftArrowBtn_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="/StarFire2;component/img/LeftArrow.png"/>
-            </Button.Background>
-        </Button>
+        <ListView
+                 Name="listprod" Width="600" Margin="0,10,0,0" 
+                Background="Transparent" BorderBrush="Transparent" 
+                HorizontalContentAlignment="Center" 
+                HorizontalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="White" CornerRadius="10" Margin="10,0,0,10">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="20" />
+                        </Border.Effect>
+                        <Canvas Height="150" Width="500" HorizontalAlignment="Center">
+                            <Image Source="{Binding Photo}" Height="100" Width="100" Margin="350,10"/>
+                            <TextBlock 
+                                Text="{Binding Name}" 
+                                FontWeight="Bold" 
+                                FontSize="35" 
+                                Margin="10,30"
+                                Width="500"
+                                TextAlignment="Left" 
+                                Background="Transparent"/>
+                            <TextBlock 
+                                Text="{Binding Description}" 
+                                FontSize="15" 
+                                Margin="10,75"
+                                Width="300"
+                                TextAlignment="Left" 
+                                TextWrapping="Wrap"
+                                Background="Transparent"/>
+                            <TextBlock 
+                                Text="{Binding Price}" 
+                                FontWeight="Bold" 
+                                FontSize="20" 
+                                Margin="0,110"
+                                Width="500"
+                                TextAlignment="Center" 
+                                Background="Transparent"/>
+                        </Canvas>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </Page>

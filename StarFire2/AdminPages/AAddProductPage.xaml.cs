@@ -28,8 +28,15 @@ namespace StarFire.AdminPages
         public AAddProductPage()
         {
             InitializeComponent();
+            GetInfo();
         }
 
+        public void GetInfo()
+        {
+            var gg = App.starFireEntities.TypeOfProducts.ToList();
+            TypeProd.ItemsSource = gg;
+            TypeProd.DisplayMemberPath = "Name";
+        }
         public BitmapSource ByteArrayToImage(byte[] buffer)
         {
             using (var stream = new MemoryStream(buffer))
@@ -63,9 +70,16 @@ namespace StarFire.AdminPages
             {
                 Products prod = new Products();
                 {
+                    //var gg = TypeProd.SelectedItem as Products;
+
+                    //var id = (from i in App.starFireEntities.TypeOfProducts
+                    //          where i.ID_type == gg.ID_type
+                    //          select i).First();
+
                     prod.Name = NameProduct.Text;
                     prod.Price = Convert.ToInt32(PriceProd.Text);
                     prod.Description = DescriptionProduct.Text;
+                    //prod.ID_type = id.ID_type;
                     prod.Photo = photo;
                     App.starFireEntities.SaveChanges();
                 }

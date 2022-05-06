@@ -22,9 +22,15 @@ namespace StarFire.Pages
     /// </summary>
     public partial class PurchasePage : Page
     {
-        public PurchasePage()
+        Products products;
+        //public int ID;
+        public PurchasePage(Products prod)
         {
+            //ID = id;
             InitializeComponent();
+            //NumberProd.Text = ID.ToString();
+            products = prod;
+            NumberProd.Text = prod.ID_prod.ToString(); 
         }
 
         private void PurchasePageBtn_Click(object sender, RoutedEventArgs e)

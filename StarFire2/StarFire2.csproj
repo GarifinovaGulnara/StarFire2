@@ -112,6 +112,7 @@
     <Compile Include="db\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProdModel.cs" />
     <Compile Include="Windows\AboutUsWindow.xaml.cs">
       <DependentUpon>AboutUsWindow.xaml</DependentUpon>
     </Compile>

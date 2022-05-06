@@ -1,4 +1,6 @@
 ﻿using StarFire2;
+using StarFire2.db;
+using StarFire2.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,7 +24,7 @@ namespace StarFire.Pages
     /// </summary>
     public partial class CatalogPage : Page
     {
-        public int x = 1;
+        public int b = 0;
         public CatalogPage()
         {
             InitializeComponent();
@@ -31,60 +33,20 @@ namespace StarFire.Pages
 
         public void GetInfoProd()
         {
-            StarFire2.db.Products prod = new StarFire2.db.Products();
-            try
-            {
-                var lst1 = from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x
-                           select cust;
-                var lst2 = from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x+1
-                           select cust;
-                var lst3 = from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x+2
-                           select cust;
-                var lst4 = from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x+3
-                           select cust;
-
-                NumberOrderLab1.Content = lst1.First().ID_prod;
-                Des1.Text = lst1.First().Description;
-                PrProd1.Content = lst1.First().Price;
-
-                NumberOrderLab2.Content = lst2.First().ID_prod;
-                Des2.Text = lst2.First().Description;
-                PrProd2.Content = lst2.First().Price;
-
-                NumberOrderLab3.Content = lst3.First().ID_prod;
-                Des3.Text = lst3.First().Description;
-                PrProd3.Content = lst3.First().Price;
-
-                NumberOrderLab4.Content = lst4.First().ID_prod;
-                Des4.Text = lst4.First().Description;
-                PrProd4.Content = lst4.First().Price;
-
-                var ph1 = (from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x
-                           select cust.Photo).First();
-
-                var ph2 = (from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x+1
-                           select cust.Photo).First();
-
-                var ph3 = (from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x+2
-                           select cust.Photo).First();
-
-                var ph4 = (from cust in App.starFireEntities.Products
-                           where cust.ID_prod == x+3
-                           select cust.Photo).First();
-
-                img1.Source = ByteArrayToImage(ph1);
-                img2.Source = ByteArrayToImage(ph2);
-                img3.Source = ByteArrayToImage(ph3);
-                img4.Source = ByteArrayToImage(ph4);
-            }
-            catch { }
+            //List<ProdModel> prodModels = new List<ProdModel>();
+            //var prods = App.starFireEntities.Products.ToList();
+            //foreach (var prod in prods)
+            //{
+            //    ProdModel prodModel = new ProdModel();
+            //    prodModel.Id = prod.ID_prod;
+            //    prodModel.Name = prod.Name;
+            //    prodModel.Photo = ByteArrayToImage(prod.Photo);
+            //    prodModel.Price = prod.Price;
+            //    prodModel.Description = prod.Description;
+            //    prodModels.Add(prodModel);
+            //}
+            //listprod.ItemsSource = prodModels;
+            listprod.ItemsSource = App.starFireEntities.Products.ToList();
         }
 
         public BitmapSource ByteArrayToImage(byte[] buffer)
@@ -94,35 +56,28 @@ namespace StarFire.Pages
                 return BitmapFrame.Create(stream, BitmapCreateOptions.None, BitmapCacheOption.OnLoad);
             }
         }
-        private void PurchasePageBtn_Click(object sender, RoutedEventArgs e)
+
+        private void listprod_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.NavigationService.Navigate(new PurchasePage());
+            var gg = listprod.SelectedItem as Products;
+
+            this.NavigationService.Navigate(new PurchasePage(gg));
         }
 
-        private void RightArrowBtn_Click(object sender, RoutedEventArgs e)
+        private void FilterBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (x + 4 <= App.starFireEntities.Products.Count())
-            {
-                x += 4;
-            }
-            else
-            {
-                x = 1;
-            }
-            GetInfoProd();
-        }
-
-        private void LeftArrowBtn_Click(object sender, RoutedEventArgs e)
-        {
-            if (x - 4 <= App.starFireEntities.Products.Count())
-            {
-                x -= 4;
-            }
-            else
-            {
-                x = 1;
-            }
-            GetInfoProd();
+            //foreach(var fil in App.starFireEntities.Products)
+            //{
+            //    if (fil.Price == Convert.ToInt32(OtPrice.Text.Trim()) && fil.Price == Convert.ToInt32(DoPrice.Text.Trim()))
+            //    {
+            //        b++;
+            //        listprod.SelectedItem = App.starFireEntities.Products.Where(x => x.Price == Convert.ToInt32(OtPrice.Text) && x.Price == Convert.ToInt32(DoPrice.Text));
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Error");
+            //    }
+            //}
         }
     }
 }
